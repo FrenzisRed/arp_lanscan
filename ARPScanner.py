@@ -24,6 +24,7 @@ print("\n****************************************************************")
 # Regular Expression Pattern to recognise IPv4 addresses.
 ip_add_range_pattern = re.compile("^(?:[0-9]{1,3}\.){3}[0-9]{1,3}/[0-9]*$")
 
+savefilename = input("\nFilename to save results into:")
 # Get the address range to ARP
 while True:
     ip_add_range_entered = input("\nPlease enter the ip address and range that you want to send the ARP request to (ex 192.168.1.0/24): ")
@@ -38,3 +39,10 @@ while True:
 # If a valid ip address range was supplied the program will return
 # the list of all results.
 arp_result = scapy.arping(ip_add_range_entered)
+
+#saving list of replys if name entered	
+if savefilename:
+	print("saving")
+	f = open(savefilename,"w+")
+	f.write(str(arp_result)+'/n')
+	f.close()
