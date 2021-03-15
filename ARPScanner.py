@@ -17,9 +17,8 @@ print(r"""
                                         ░
 """)
 print("\n****************************************************************")
-print("\n* Copyright of David Bombal, 2021                              *")
+print("\n* based,on David Bombal, 2021                                  *")
 print("\n* https://www.davidbombal.com                                  *")
-print("\n* https://www.youtube.com/davidbombal                          *")
 print("\n****************************************************************")
 
 # Regular Expression Pattern to recognise IPv4 addresses.
